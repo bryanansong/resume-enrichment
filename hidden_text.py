@@ -30,9 +30,9 @@ def load_keywords():
         return ""
 
 PLACEHOLDER_TEXT = load_keywords()  # Text to insert once as placeholder
-INSERT_X = 100.0                 # X coordinate (points) for insertion
-INSERT_Y = 100.0                 # Y coordinate (baseline, points)
-FONT_SIZE = 0.01                  # Font size in points (tiny, invisible)
+INSERT_X = 35.0                 # X coordinate (points) for insertion
+INSERT_Y = 200.0                 # Y coordinate (baseline, points)
+FONT_SIZE = 0.001                  # Font size in points (tiny, invisible)
 
 
 # ------------------ FUNCTIONS ------------------
@@ -41,7 +41,6 @@ def insert_invisible_text(page, x, y, text, fontsize=0.1):
     """Insert invisible (0 fill-opacity) text at (x,y)."""
     shape = page.new_shape()
     shape.insert_text((x, y), text, fontsize=fontsize, color=(1, 1, 1))
-    # shape.set_opacity(stroke=0.0, fill=0.0)  # invisible
     shape.finish()
     shape.commit()
 
