@@ -1,6 +1,69 @@
-C# , Angular , VueJS , Selenium , cloud technologies , PowerBI , Groovy , Ruby , Gen AI tools , MLOps , distributed software systems , infrastructure solutions 
-proprietary systems , investment decisions , energy markets , software design , user requirements , product lifecycle , iOS , macOS , Siri , Concurrency , Distributed Systems , design patterns , resolve dependencies , Swift , Objective C , Kotlin , Android development , mobile app development , design patterns , CI/CD , JUnit , Jetpack Compose , Coroutines , Hilt , RESTful APIs , Espresso , Scrum , Kanban , microservices , NoSQL , Terraform , Jenkins , Serverless , Shell scripts , PL/SQL , Open Source , AWS Cloud , Machine Learning , fine-tuning , R , Next.js , low level , operating system , embedded systems , communication , Elasticsearch , Kafka , .NET , GPA: 4.0, Node.js , Ci/Cd , Coninuous Integration/Continuous Development , CI/CD , gRPC , RPC , protobuf , REST , API , Graphql, AI/ML , TensorFlow , PyTorch , Scikit-learn , Transformers , LLM , OpenAI, Cohere, Anthropic , business analysis , development life cycle , fintech , troubleshooting , web services , front end , DevOps , django , salesforce , CRM
-ESG , DuckDB , cockroach DB , Google Cloud Storage , Firebase , algorigthms , integrations , SDLC , e-commerce , enterprise solutions , Oracle , 
-Ada 95 , Linux , data science , Lua , Perl , Redis , DynamoDB , XML , JSON , Perl , asp.net , Visual Basic , Scala , Clojure , Haskell , Scheme , 
-SQL Server , backend , NLP , computer vision , AdTech , content management system , online advertising , recommendation , opencv
-Scala , HTML5 , DOM , SVN , Jira , test-driven development , Redux , Snowflake , Spark , Tableau , Azure , cybersecurity , Bash , network security , financial analysis
+Project 1: NexusAI - A Polyglot Generative UI Platform
+
+This candidate built a web platform where developers can describe a user interface in natural language, and the platform generates starter code for multiple frontend frameworks, powered by a sophisticated multi-model AI backend and deployed on a serverless architecture.
+
+Resume Bullet Points:
+*   Architected a full-stack, AI-powered developer tool using Next.js for the main portal, while engineering separate modules to generate boilerplate code for React, VueJS, and Angular, complete with state management patterns using Redux and direct DOM manipulation logic, all built on semantic HTML5.
+*   Developed a polyglot backend API layer on Node.js and the bun.js runtime, implementing a multi-paradigm gateway that supports GraphQL for complex client-side queries, standard RESTful APIs for authentication, and high-performance internal RPC via gRPC and protobuf schemas; integrated a Django microservice for Python-specific model serving.
+*   Engineered the core AI/ML engine leveraging multiple Gen AI tools; implemented NLP using Transformers and fine-tuning techniques on large language models from OpenAI, Cohere, and Anthropic. Utilized TensorFlow and PyTorch for custom model training and Scikit-learn for classical Machine Learning components.
+*   Designed a resilient, distributed data and deployment strategy using a NoSQL-first approach with Convex for real-time frontend updates, CockroachDB for distributed transactional integrity, and both DynamoDB and Firebase for Serverless functions. Implemented Redis for caching, stored generated assets on AWS S3 and Google Cloud Storage, and deployed the entire system on Vercel and AWS Cloud / Google Cloud via a full CI/CD pipeline managed by Jenkins, securing user access with OAuth while adhering to a strict SDLC using Scrum, Kanban, and test-driven development.
+
+---
+
+Project 2: FinanSys - Enterprise Personal Finance & Analytics Suite
+
+This candidate created a robust, enterprise-grade personal finance dashboard that mimics corporate financial systems. It features a secure .NET backend, a detailed data warehouse, and business intelligence reporting capabilities deployed on a cloud platform.
+
+Resume Bullet Points:
+*   Engineered a secure, scalable backend using C# and the .NET framework, building a suite of asp.net web services to handle financial data aggregation, user authentication, and transaction processing, demonstrating a full understanding of the enterprise solutions product lifecycle.
+*   Designed and developed a feature-rich single-page application frontend using Angular, meticulously adhering to software design principles based on analyzed user requirements. Integrated with the backend through secure JSON and legacy XML data formats and troubleshot complex fintech data-binding issues.
+*   Constructed a robust data persistence layer by architecting a relational database schema in SQL Server and integrating a secondary data source from an Oracle database using PL/SQL stored procedures to perform complex financial analysis and calculations.
+*   Deployed the entire stack to Azure, establishing a DevOps pipeline with CI/CD through Jenkins for automated builds and testing. Utilized PowerBI and Tableau to build and embed interactive dashboards for visualizing investment performance and spending habits, showcasing skills in business analysis and reporting.
+
+---
+
+Project 3: Trailblazer AR - Cross-Platform Augmented Reality Mobile Game
+
+This candidate built a native mobile application for both iOS and Android. It’s an AR-based scavenger hunt game that allows users to find and leave virtual items in real-world locations, requiring high performance and deep platform integration.
+
+Resume Bullet Points:
+*   Developed the complete iOS and macOS client using Swift and Objective C, implementing core game logic while leveraging platform-specific features like Siri shortcuts for voice-activated commands and ensuring smooth performance through advanced Concurrency management.
+*   Simultaneously engineered the Android development version of the application in Kotlin, building a modern, declarative UI with Jetpack Compose and managing asynchronous operations flawlessly with Coroutines. Implemented a clean architecture using Hilt for dependency injection.
+*   Designed and documented the application's shared backend communication layer using RESTful APIs, and established a rigorous testing suite for the mobile app development lifecycle, employing JUnit for unit tests and Espresso for automated UI testing on Android.
+*   Managed the entire project following Scrum and Kanban agile methodologies, applying key design patterns to ensure code reusability across platforms. Utilized Firebase for real-time database updates and user authentication, all automated within a CI/CD workflow.
+
+---
+
+Project 4: CityPulse - Real-Time Urban Data Analytics Platform
+
+This candidate created a massive data engineering pipeline that ingests real-time public transit and social media data for a city, processes it, and serves it to a dashboard that visualizes urban activity, predicts traffic, and identifies trending locations.
+
+Resume Bullet Points:
+*   Architected a high-throughput data ingestion pipeline using Kafka for real-time event streaming and developed complex data transformation jobs in Scala running on Apache Spark to process and enrich terabytes of raw data daily.
+*   Built a multi-faceted data storage and query layer, utilizing Snowflake as the primary data warehouse, Elasticsearch for high-speed text search and log analytics, and a hybrid database approach with DuckDB for analytical queries and CockroachDB for distributed transactional data.
+*   Led the data science initiative for the project, applying Machine Learning algorithms to build a recommendation engine for points of interest. Implemented computer vision models using opencv to analyze public webcam feeds, and utilized the R language for statistical modeling of urban trends.
+*   Established a full MLOps lifecycle on AWS Cloud, automating model training and deployment. Created a public-facing dashboard with Tableau and PowerBI to visualize insights, demonstrating a practical application of data analytics relevant to AdTech, online advertising, and financial analysis of city economies.
+
+---
+
+Project 5: Phoenix Infra - A Personal Cloud Platform-as-a-Service (PaaS)
+
+This candidate turned their personal server (homelab) into a fully automated, private cloud platform. It uses infrastructure-as-code and robust CI/CD pipelines to deploy containerized applications with a focus on security and resilience.
+
+Resume Bullet Points:
+*   Engineered a complete, private cloud platform on bare-metal servers by defining all infrastructure solutions as code with Terraform, enabling one-command provisioning of networking, storage, and compute resources on a Linux-based environment.
+*   Built a comprehensive CI/CD automation framework using Jenkins, writing declarative pipelines in Groovy and complex deployment scripts using Bash, Shell scripts, Ruby, and Perl to support a wide range of application types from compilation to deployment.
+*   Designed the platform around a microservices architecture, enabling the deployment of both stateful applications and Serverless functions. Implemented robust cybersecurity protocols, including automated certificate management and strict network security rules, to protect all services.
+*   Managed project workflow and documentation using Jira, followed Open Source best practices for code management, and even integrated a legacy SVN repository to demonstrate proficiency in handling different version control systems in a professional DevOps context.
+
+---
+
+Project 6: "BareMetal" - A Custom OS for an IoT Weather Station
+
+This candidate designed and built a custom, real-time operating system from the ground up for a Raspberry Pi-based weather station, focusing on efficiency, reliability, and functional programming principles for system configuration.
+
+Resume Bullet Points:
+*   Developed a custom, real-time operating system for an embedded systems environment (Raspberry Pi), writing the kernel and memory management in Ada 95 to guarantee high reliability and deterministic performance, with a deep focus on low level hardware communication and Concurrency.
+*   Implemented the system's configuration and package management layer using a functional programming paradigm, leveraging Haskell, Clojure, and Scheme to create a declarative and provably correct system state. Wrote device drivers and user-space utilities using scripting languages like Lua and Perl.
+*   Engineered a Distributed Systems protocol allowing multiple sensor nodes to form a mesh network, ensuring data integrity by implementing custom algorithms to resolve dependencies and network partitions, all running on the Linux kernel as a base.
+*   Validated system integrity through a series of automated tests, including a web-based dashboard for remote monitoring whose UI interactions were tested with Selenium, showcasing a full-stack approach to a deeply specialized project.
