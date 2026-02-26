@@ -23,7 +23,7 @@ Many Applicant Tracking Systems (ATS) parse raw PDF text to score resumes for ke
 uv pip install pymupdf
 
 # Run the script
-uv run hidden_text.py
+uv run main.py
 ```
 
 ### Option B — Standard Python (pip + venv)
@@ -37,7 +37,7 @@ source .venv/bin/activate
 pip install pymupdf
 
 # Run the script
-python hidden_text.py
+python main.py
 ```
 
 ---
