@@ -1,25 +1,25 @@
 #!/usr/bin/env python3
 """
-Insert and update invisible (opacity=0) searchable text in a PDF using PyMuPDF.
+Insert invisible (opacity=0) searchable text into all PDFs in a directory.
 
 Usage:
-  - Set INIT_MODE = True to insert a new placeholder.
-  - Set UPDATE_MODE = True to replace old hidden text with new hidden text.
-  - Edit constants below to adjust behavior.
+  - Place your PDFs in the `drop-resume-here` directory.
+  - Run this script. It will process all PDFs and save them to the `resulting-resume` directory.
+  - Edit constants below to adjust behavior (e.g., coordinates, font size).
 """
 
 import fitz  # PyMuPDF
 
 # ------------------ CONFIG CONSTANTS ------------------
 
-INIT_MODE = True      # True = insert a hidden placeholder
+import os
+import glob
 
-INPUT_PDF = "data/input.pdf"     # Path to input PDF
-OUTPUT_PDF = "output.pdf"   # Path to output PDF after modification
+INPUT_DIR = "drop-resume-here"     # Directory containing input PDFs
+OUTPUT_DIR = "resulting-resume"    # Directory for final modified PDFs
 
 PAGE_INDEX = 0              # Page number (0-based index)
 
-# For INIT_MODE
 def load_keywords():
     """Load keywords from keywords.txt file."""
     try:
@@ -47,11 +47,36 @@ def insert_invisible_text(page, x, y, text, fontsize=0.1):
 
 # ------------------ MAIN ------------------
 
-doc = fitz.open(INPUT_PDF)
-page = doc[PAGE_INDEX]
+def process_pdf(pdf_path, text):
+    doc = fitz.open(pdf_path)
+    if len(doc) <= PAGE_INDEX:
+        print(f"Skipping {pdf_path}: doesn't have page index {PAGE_INDEX}")
+        return
+    page = doc[PAGE_INDEX]
+    
+    insert_invisible_text(page, INSERT_X, INSERT_Y, text, fontsize=FONT_SIZE)
+    
+    filename = os.path.basename(pdf_path)
+    output_pdf = os.path.join(OUTPUT_DIR, filename)
+    
+    doc.save(output_pdf)
+    print(f"Saved modified PDF for '{filename}' as '{output_pdf}'")
 
-insert_invisible_text(page, INSERT_X, INSERT_Y, PLACEHOLDER_TEXT, fontsize=FONT_SIZE)
-print(f"Inserted placeholder '{PLACEHOLDER_TEXT}' on page {PAGE_INDEX}")
-
-doc.save(OUTPUT_PDF)
-print(f"Saved modified PDF as {OUTPUT_PDF}")
+if __name__ == "__main__":
+    if not os.path.exists(INPUT_DIR):
+        print(f"Directory '{INPUT_DIR}' not found. Please create it and add PDFs.")
+    else:
+        pdf_files = glob.glob(os.path.join(INPUT_DIR, "*.pdf"))
+        
+        if not pdf_files:
+            print(f"No PDFs found in directory: {INPUT_DIR}")
+        else:
+            os.makedirs(OUTPUT_DIR, exist_ok=True)
+            print(f"Found {len(pdf_files)} PDF(s) to process.")
+            text = PLACEHOLDER_TEXT
+            for pdf_path in pdf_files:
+                print(f"Processing '{pdf_path}'...")
+                try:
+                    process_pdf(pdf_path, text)
+                except Exception as e:
+                    print(f"Error processing {pdf_path}: {e}")
